@@ -19,7 +19,9 @@ class Roadstore extends CI_Controller {
 	 */
 	public function index()
 	{
-		echo 'ok';
+		$this->load->view('header');
+		$this->load->view('default/index');
+		$this->load->view('footer');
 	}
 }
 
