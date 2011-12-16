@@ -1,0 +1,408 @@
+@charset "utf-8";
+
+html
+{
+	height:100%;
+}
+form {
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+#content .slide
+{
+	color:#CCC;
+}
+
+.slide  {
+	height: 280px;
+	overflow: hidden;
+	min-width: 902px;
+}
+
+.center
+{
+	margin:auto;
+	width:900px;
+}
+
+a
+{
+	text-decoration:none;
+}
+
+a:hover
+{
+	text-decoration:underline;
+}
+
+.decoration
+{
+	color:#4E3514;
+	text-decoration:none;
+}
+
+.decoration:hover{
+	color:#F0C000;
+}
+
+
+@font-face {
+	font-family: 'BebasNeue';
+	src: url('fonts/BebasNeue-webfont.eot');
+	src: local('?'), url('fonts/BebasNeue-webfont.woff') format('woff'), url('fonts/BebasNeue-webfont.ttf') format('truetype'), url('fonts/BebasNeue-webfont.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+body {
+	height:100%;
+	background-image: url(imgs/pattern.png);
+}
+
+h1, h2 ,h3 ,h4 ,h5 ,h6 {
+	font-family:'BebasNeue',Arial,sans-serif;
+	text-align: left;
+	color: #999;
+	width: auto;
+}
+
+label
+{
+		font-family:'BebasNeue',Arial,sans-serif;
+		color: #999;
+}
+
+#mural {
+	background-color: #FFF;
+	height: 280px;
+}
+
+
+#content h3, h1:hover{
+	color: #333;
+}
+
+
+header {
+	z-index:3;
+	background-image: url(imgs/fundo.png);
+	background-repeat: repeat-x;
+	display: block;
+	height: 135px;
+	-webkit-box-shadow: 0px 0px 6px 0px #333;
+	-moz-box-shadow: 0px 0px 6px 0px #333;
+	box-shadow: 0px 0px 6px 0px #333;
+}
+
+header #marca {
+	position: absolute;
+}
+
+/*   Menu esquerda  */
+
+#sidemenu{
+	width: 140px;
+	float: left;
+	z-index:1;
+	margin-right:20px;
+	background-color: #2D1A11;	
+	-webkit-box-shadow: 0px 0px 6px 0px #333;
+	-moz-box-shadow: 0px 0px 6px 0px #333;
+	box-shadow: 0px 0px 6px 0px #333;
+	display: block;
+}
+
+ul.subitens{
+	height:100%;
+	text-align: left;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	position: relative;
+	list-style: none;
+}
+
+#sidemenu #cowgirl{
+	background-image: url(imgs/menu_sprites.png);
+	background-repeat: no-repeat;
+	background-position: -140px 0px;
+	height: 38px;
+	width: 140px;
+}
+
+#sidemenu #cowboy{
+	background-image: url(imgs/menu_sprites.png);
+	background-repeat: no-repeat;
+	background-position: 0px -38px;
+	height: 38px;
+	width: 140px;
+	position: relative;
+}
+
+#sidemenu #chapeu{
+	background-image: url(imgs/menu_sprites.png);
+	background-repeat: no-repeat;
+	background-position: -283px -38px;
+	height: 38px;
+	width: 140px;
+	position: relative;
+}
+
+#sidemenu #bota_tenis{
+	background-image: url(imgs/menu_sprites.png);
+	background-repeat: no-repeat;
+	background-position: -424px -38px;
+	height: 38px;
+	width: 140px;
+	position: relative;
+}
+
+#sidemenu #cintos{
+	background-image: url(imgs/menu_sprites.png);
+	background-repeat: no-repeat;
+	background-position: -565px -38px;
+	height: 38px;
+	width: 140px;
+	position: relative;
+}
+
+#sidemenu #fivelas{
+	background-image: url(imgs/menu_sprites.png);
+	background-repeat: no-repeat;
+	background-position: -706px -38px;
+	height: 38px;
+	width: 140px;
+	position: relative;
+}
+
+#sidemenu #exclusivos{
+	background-image: url(imgs/menu_sprites.png);
+	background-repeat: no-repeat;
+	background-position: -848px 0px;
+	height: 38px;
+	width: 140px;
+	position: relative;
+}
+
+#sidemenu #acessorios{
+	background-image: url(imgs/menu_sprites.png);
+	background-repeat: no-repeat;
+	background-position: -988px -38px;
+	height: 38px;
+	width: 140px;
+	position: relative;
+}
+
+#sidemenu #servicos{
+	background-image: url(imgs/menu_sprites.png);
+	background-repeat: no-repeat;
+	background-position: -1130px -38px;
+	height: 38px;
+	width: 140px;
+	position: relative;
+}
+
+
+#sidemenu #cowboy{
+	background-image: url(imgs/menu_sprites.png);
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+	
+	width: 140px;
+}
+
+#sidemenu #chapeu{
+	background-image: url(imgs/menu_sprites.png);
+	background-repeat: no-repeat;
+	background-position: -283px 0px;
+	
+	width: 140px;
+}
+
+#sidemenu #bota_tenis{
+	background-image: url(imgs/menu_sprites.png);
+	background-repeat: no-repeat;
+	background-position: -424px 0px;
+	
+	width: 140px;
+}
+
+#sidemenu #cintos{
+	background-image: url(imgs/menu_sprites.png);
+	background-repeat: no-repeat;
+	background-position: -565px 0px;
+	
+	width: 140px;
+}
+
+#sidemenu #fivelas{
+	background-image: url(imgs/menu_sprites.png);
+	background-repeat: no-repeat;
+	background-position: -706px 0px;
+	
+	width: 140px;
+}
+
+#sidemenu #importados{
+	background-image: url(imgs/menu_sprites.png);
+	background-repeat: no-repeat;
+	background-position: -848px 0px;
+	
+	width: 140px;
+}
+
+#sidemenu #acessorios{
+	background-image: url(imgs/menu_sprites.png);
+	background-repeat: no-repeat;
+	background-position: -988px 0px;
+	
+	width: 140px;
+}
+
+#sidemenu #servicos{
+	background-image: url(imgs/menu_sprites.png);
+	background-repeat: no-repeat;
+	background-position: -1128px 0px;
+	
+	width: 140px;
+}
+
+.subitens li
+{
+	margin-left:30px;
+}
+
+.subitens a{
+	color:#FBEB8E;
+	font-weight: bold;
+}
+
+.subitens a:hover{
+	color:#FFF;
+}
+
+.subitens a:visited{
+	color:#FFF;
+}
+
+#sidemenu #subitens li {
+	margin-left: 20px;
+	list-style-type: none;
+}
+
+
+
+
+/* Menu Direita */
+
+
+
+#right_content{
+	width: 140px;
+	z-index:2;
+	min-height:1160px;
+	float: left;
+	margin-right:0px;
+	position: relative;
+	-webkit-box-shadow: 0px 0px 6px 0px #333;
+	-moz-box-shadow: 0px 0px 6px 0px #333;
+	box-shadow: 0px 0px 6px 0px #333;
+	background-color: #2D1A11;
+	display:none;
+}
+
+
+
+
+/* Main Content */
+
+#main {
+	height: 1220px;
+	min-width:70%;
+	/*text-align:center;*/
+}
+#main #content {
+	height: 1142px;
+	width:960px;
+	margin-left:auto;
+	/*margin-right:300px;*/
+	padding-top:20px;
+}
+.slide  {
+	height: 280px;
+	overflow: hidden;
+	min-width: 902px;
+}
+
+footer {
+	display: block;
+	background-color: #000;
+	height: 66px;
+	clear:both;
+	background-image: url(imgs/fundo2.png);
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-top-color: #764023;
+	background-repeat: repeat-x;
+	padding-top: 80px;
+}
+
+.wood {
+	background-image: url(imgs/wd_patt.png);
+	padding: 5px;
+}
+
+#desc_area {
+	-moz-transform:rotate(270deg);
+	-webkit-transform:rotate(270deg);
+	transform:rotate(270deg);
+	position:absolute;
+	right:-159px;
+	font-size:30px;
+	top: 354px;
+}
+
+.button
+{
+	padding:5px;
+	color:#E93F43;
+}
+
+#main_menu
+{
+	background-color:#4c0014;
+	-webkit-box-shadow: 0px 0px 6px 0px #333;
+	-moz-box-shadow: 0px 0px 6px 0px #333;
+	box-shadow: 0px 0px 6px 0px #333;
+}
+
+#main_menu ul
+{
+	width:800px;
+	margin:auto;
+}
+
+#main_menu ul li
+{
+	display:inline;
+}
+
+#main_menu ul li a
+{
+	font-family: 'BebasNeue';
+	font-size:20px;
+	color:#F5DE8D;
+	padding: 5px 50px;	
+}
+
+#main_menu ul li a:hover
+{
+	font-family: 'BebasNeue';
+	background-color:#820015;
+	font-size:20px;
+	color:#FFF;
+}

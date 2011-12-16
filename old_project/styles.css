@@ -1,0 +1,142 @@
+@charset "utf-8";
+
+* {
+	margin: 0px;
+	padding: 0px;
+	text-decoration:none;
+}
+
+html
+{
+	height:100%;
+}
+
+body
+{
+	font-family:'QuicksandLight';
+	color:#2463A8;
+	height:100%;
+}
+
+@font-face {
+    font-family: 'QuicksandLight';
+    src: url('../fonts/quicksand_light-webfont.eot');
+    src: url('../fonts/quicksand_light-webfont.eot?#iefix') format('embedded-opentype'),
+url('../fonts/quicksand_light-webfont.woff') format('woff'),
+url('../fonts/quicksand_light-webfont.ttf') format('truetype'),
+url('../fonts/quicksand_light-webfont.svg#QuicksandLight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'QuicksandBold';
+    src: url('../fonts/quicksand_bold-webfont.eot');
+    src: url('../fonts/quicksand_bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/quicksand_bold-webfont.woff') format('woff'),
+         url('../fonts/quicksand_bold-webfont.ttf') format('truetype'),
+         url('../fonts/quicksand_bold-webfont.svg#QuicksandBold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+header {
+	display: block;
+	background-color: rgba(13,162,242,1);
+	color: rgba(255,255,255,1);
+	padding: 20px;
+	box-shadow: 0px 2px 2px 3px rgba(30,60,108,0.6);
+	z-index: 2;
+	position: relative;
+}
+
+nav {
+	background-color: rgba(152,216,250,1);
+	min-height:90%;
+	width:200px;
+	float: left;
+	padding-top: 20px;
+	padding-right: 10px;
+	padding-bottom: 20px;
+	padding-left: 10px;
+}
+article li {
+	list-style-type:none;
+	padding: 5px;
+	background-color: rgba(152,216,250,1);
+	cursor:pointer;
+	margin-bottom:5px;
+	margin-top:5px;
+	border-radius:5px;
+	-webkit-transition: background-color 0.3s ease;
+}
+nav ul li
+{
+	list-style-type:none;
+	padding: 5px;
+	background-color: rgba(255,255,255,1);	
+	cursor:pointer;
+	margin-bottom:5px;
+	margin-top:5px;
+	border-radius:5px;
+	-webkit-transition: background-color 0.3s ease;
+}
+li:hover
+{
+	background-color:rgba(243,239,67,1);
+	-webkit-transition:background-color 0.3s ease;
+}
+.selected
+{
+	background-color:rgba(243,239,67,1);
+}
+.selected:hover
+{
+	background-color:#A9A034;
+}
+ul a
+{
+	color:#103F6D;	
+}
+
+a:hover
+{
+	text-decoration:underline;
+}
+article
+{
+	padding:20px;
+	float:left;
+	height:90%;
+	display:block;
+}
+footer {
+	clear: both;
+	display: block;
+	background-color: rgba(13,162,242,1);
+	height: 50px;
+	color: rgba(255,255,255,1);
+	padding: 20px;
+}
+
+.botao
+{
+	font-family:'QuicksandBold';	
+	padding:3px;
+	color:rgba(27,77,137,1);
+}
+
+.pages
+{
+	font-family:'QuicksandBold';	
+	position:relative;
+	left:20px;
+	font-size:12px;
+	width: 100px;
+}
+
+h1,h2,h3,h4,h5,h6
+{
+	font-family:'QuicksandBold';	
+}
