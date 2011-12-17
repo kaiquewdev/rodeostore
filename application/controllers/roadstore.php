@@ -16,14 +16,36 @@ class Roadstore extends CI_Controller {
 	 * So any other public methods not prefixed with an underscore will
 	 * map to /index.php/welcome/<method_name>
 	 * @see http://codeigniter.com/user_guide/general/urls.html
-	 */
+	 */						
 	public function index()
 	{
-		$this->load->view('header');
+		$data['menu'] = make_menu();
+		$this->load->view('elements/header', $data);
 		$this->load->view('default/index');
-		$this->load->view('footer');
+		$this->load->view('elements/footer');
+	}
+	
+	public function products()
+	{
+		$data['menu'] = make_menu();
+		$this->load->view('elements/header', $data);
+		$this->load->view('default/products');
+		$this->load->view('elements/footer');
+	}
+	
+	public function about()
+	{
+		$data['menu'] = make_menu();
+		$this->load->view('elements/header', $data);
+		$this->load->view('default/about');
+		$this->load->view('elements/footer');
+	}
+	
+	public function contact()
+	{
+		$data['menu'] = make_menu();
+		$this->load->view('elements/header', $data);
+		$this->load->view('default/contact');
+		$this->load->view('elements/footer');
 	}
 }
-
-/* End of file welcome.php */
-/* Location: ./application/controllers/welcome.php */

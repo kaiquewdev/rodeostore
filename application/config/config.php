@@ -14,7 +14,7 @@
 | path to your installation.
 |
 */
-$config['base_url']	= 'http://localhost';
+$config['base_url']	= 'http://localhost/roadstore/';
 #$config['base_url']	= '';
 
 /*

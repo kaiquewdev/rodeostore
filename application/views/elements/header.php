@@ -35,7 +35,26 @@
   <header>
 	<article>
 		<section>
-			<h1>Road Store</h1>
+			<div class="logo">
+				<h1 class="main-type">Road Store</h1>
+			</div>
+			<nav class="main-menu">
+				<ul>
+					<li>
+						<a href="<?php echo $menu[0]; ?>">Inicio</a>
+					</li>
+					<li>
+						<a href="<?php echo $menu[1]; ?>">Produtos</a>
+					</li>
+					<li>
+						<a href="<?php echo $menu[2]; ?>">Sobre</a>
+					</li>
+					<li>
+						<a href="<?php echo $menu[3]; ?>">Contato</a>
+					</li>
+				</ul>
+			</nav>
 		</section>
 	</article>
+	<hr />
   </header>
