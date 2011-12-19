@@ -36,24 +36,24 @@
 	<article>
 		<section>
 			<div class="logo">
-				<h1 class="main-type">Road Store</h1>
+				<h1 class="panel-main-type">Road Store: Administração</h1>
 			</div>
-			<nav class="main-menu">
+			<nav class="panel-main-menu">
 				<ul>
 					<li>
-						<a href="<?php echo $menu['home']; ?>">Inicio</a>
+						<a href="<?php echo $menu['panel_home']; ?>">Inicio</a>
 					</li>
 					<li>
 						<a href="<?php echo $menu['products']; ?>">Produtos</a>
 					</li>
 					<li>
-						<a href="<?php echo $menu['about']; ?>">Sobre</a>
+						<a href="<?php echo $menu['categorys']; ?>">Categorias</a>
 					</li>
 					<li>
-						<a href="<?php echo $menu['locale']; ?>">Localização</a>
+						<a href="<?php echo $menu['demands']; ?>">Pedidos</a>
 					</li>
 					<li>
-						<a href="<?php echo $menu['contact']; ?>">Contato</a>
+						<a href="<?php echo $menu['comments']; ?>">Comentarios</a>
 					</li>
 				</ul>
 			</nav>

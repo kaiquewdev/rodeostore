@@ -41,6 +41,7 @@
 $route['default_controller'] = "roadstore";
 $route['products'] = "roadstore/products";
 $route['about'] = "roadstore/about";
+$route['locale'] = "roadstore/locale";
 $route['contact'] = "roadstore/contact";
 $route['404_override'] = '';
 

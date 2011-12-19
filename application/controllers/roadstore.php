@@ -41,6 +41,14 @@ class Roadstore extends CI_Controller {
 		$this->load->view('elements/footer');
 	}
 	
+	public function locale()
+	{
+		$data['menu'] = make_menu();
+		$this->load->view('elements/header', $data);
+		$this->load->view('default/locale');
+		$this->load->view('elements/footer');
+	}
+	
 	public function contact()
 	{
 		$data['menu'] = make_menu();
