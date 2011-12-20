@@ -13,9 +13,9 @@ class Admin extends CI_Controller {
 		$this->load->view('elements/panel/footer');
 	}
 	
-	public function products($action=false)
+	public function products($action=false, $id=false)
 	{
-		if(!$action) {
+		if(!$action && !$id) {
 			$this->load->library('table');
 	
 			$data['menu'] = make_admin_menu();
@@ -24,7 +24,7 @@ class Admin extends CI_Controller {
 			$this->load->view('elements/panel/header', $data);
 			$this->load->view('panel/products', $data);
 			$this->load->view('elements/panel/footer');
-		} elseif($action == 'new') {
+		} elseif($action == 'new' && !$id) {
 			$this->load->helper('form');
 			
 			$data['menu'] = make_admin_menu();
@@ -32,6 +32,8 @@ class Admin extends CI_Controller {
 			$this->load->view('elements/panel/header', $data);
 			$this->load->view('panel/new_product');
 			$this->load->view('elements/panel/footer');
+		} elseif($action == 'remove' && $id) {
+			echo $id;
 		}
 	}
 	
