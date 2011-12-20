@@ -5,11 +5,11 @@ function make_menu()
 	//Make a default menu
 	$b = base_url();
 	$paths = array(
-		'home' => $b,
-		'products' => $b.'index.php/products',
-		'locale' => $b.'index.php/locale',
-		'about' => $b.'index.php/about',
-		'contact' => $b.'index.php/contact'	
+		'home' => make_route(),
+		'products' => make_route('products'),
+		'locale' => make_route('locale'),
+		'about' => make_route('about'),
+		'contact' => make_route('contact')
 	);
 	
 	return $paths;
@@ -18,14 +18,23 @@ function make_menu()
 function make_admin_menu()
 {
 	//Menu for admin area
-	$b = base_url();
 	$paths = array(
-		'panel_home' => $b.'index.php/panel/admin',
-		'products' => $b.'index.php/panel/admin/products',
-		'categorys' => $b.'index.php/panel/admin/categorys',
-		'demands' => $b.'index.php/panel/admin/demands',
-		'comments' => $b.'index.php/panel/admin/comments'
+		'panel_home' => make_route('panel/admin'),
+		'products' => make_route('panel/admin/products'),
+		'categorys' => make_route('panel/admin/categorys'),
+		'demands' => make_route('panel/admin/demands'),
+		'comments' => make_route('panel/admin/comments')
 	);
 	
 	return $paths;
+}
+
+function make_route($path_url=false) 
+{
+	//Make a route path to the complete url
+	if($path_url){
+		return base_url().'index.php/'.$path_url;	
+	} elseif(!$path_url) {
+		return base_url();
+	}	
 }

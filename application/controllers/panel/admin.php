@@ -13,12 +13,26 @@ class Admin extends CI_Controller {
 		$this->load->view('elements/panel/footer');
 	}
 	
-	public function products()
+	public function products($action=false)
 	{
-		$data['menu'] = make_admin_menu();
-		$this->load->view('elements/panel/header', $data);
-		//$this->load->view('panel/products');
-		$this->load->view('elements/panel/footer');
+		if(!$action) {
+			$this->load->library('table');
+	
+			$data['menu'] = make_admin_menu();
+			$data['products'] = $this->db->get('products');
+		
+			$this->load->view('elements/panel/header', $data);
+			$this->load->view('panel/products', $data);
+			$this->load->view('elements/panel/footer');
+		} elseif($action == 'new') {
+			$this->load->helper('form');
+			
+			$data['menu'] = make_admin_menu();
+			
+			$this->load->view('elements/panel/header', $data);
+			$this->load->view('panel/new_product');
+			$this->load->view('elements/panel/footer');
+		}
 	}
 	
 	public function categorys()
