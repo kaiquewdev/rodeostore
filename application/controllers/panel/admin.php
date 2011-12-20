@@ -40,38 +40,15 @@ class Admin extends CI_Controller {
 		} elseif($action == 'insert' && !$id) {
 			$this->load->library('form_validation');
 			
-			$config = array(
-				array(
-						'product_name', 
-						'Nome do Produto', 
-						'required'),
-				array(
-						'product_qty', 
-						'Quantidade do Produto', 
-						'required'),
-				array(
-						'product_weight', 
-						'Peso do Produto', 
-						'required'),
-				array(
-						'product_heigth', 
-						'Altura do Produto', 
-						'required'),
-				array(
-						'product_width', 
-						'Largura do Produto', 
-						'required'),
-				array(
-						'product_category', 
-						'Categoria do Produto', 
-						'required'),
-				array(
-						'product_description', 
-						'Descrição do Produto', 
-						'required'),
-			);
+			$this->form_validation->set_rules('product_name', 'Nome do Produto', 'required');
+			$this->form_validation->set_rules('product_qty', 'Quantidade do Produto', 'required');
+			$this->form_validation->set_rules('product_weight', 'Peso do Produto', 'required');
+			$this->form_validation->set_rules('product_heigth', 'Altura do Produto', 'required');
+			$this->form_validation->set_rules('product_width', 'Largura do Produto', 'required');
+			$this->form_validation->set_rules('product_category', 'Categoria do Produto', 'required');
+			$this->form_validation->set_rules('product_description', 'Descrição do Produto', 'required');
 			
-			$this->form_validation->set_rules($config);
+			$this->form_validation->set_message('required', 'É preciso preencher o campo %s.');
 			
 			$this->load->view('elements/panel/header', $data);
 			

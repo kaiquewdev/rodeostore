@@ -285,3 +285,12 @@ td { vertical-align: top; }
   p, h2, h3 { orphans: 3; widows: 3; }
   h2, h3 { page-break-after: avoid; }
 }
+
+/*Style*/
+div.form-error{
+	background:#f00;
+	max-height:40px;
+	max-width:500px;
+	margin:2px;
+	color:#fff;
+}
