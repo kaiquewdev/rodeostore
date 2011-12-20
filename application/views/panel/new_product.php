@@ -7,6 +7,8 @@
 			</header>
 			<fieldset>
 				<?php
+					echo validation_errors();
+				
 					echo form_open('panel/admin/products/insert');
 					
 					echo form_label('Nome:', 'Nome do Produto');
@@ -28,6 +30,10 @@
 					echo form_label('Largura:', 'Largura do Produto');
 					echo '<br />';
 					echo form_input('product_width', 'Largura do produto');
+					echo '<br />';
+					echo form_label('Categoria:', 'Categoria do Produto');
+					echo '<br />';
+					echo form_dropdown('product_category', $categorys);
 					echo '<br />';
 					echo form_label('Descrição:', 'Descrição do Produto');
 					echo '<br />';

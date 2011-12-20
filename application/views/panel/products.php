@@ -14,13 +14,14 @@
 			<hr />
 			
 			<?php
-				$this->table->set_heading('Nome', 'Quantidade', 'Preço', 'Descrição', 'Peso',  'Altura', 'Largura');
+				$this->table->set_heading('Nome', 'Quantidade', 'Categoria', 'Preço', 'Descrição', 'Peso',  'Altura', 'Largura');
 		
 				foreach ($products->result() as $r)
 				{
 					$this->table->add_row(
 											$r->name, 
 											$r->qty, 
+											$r->category, 
 											$r->price,
 											$r->description,
 											$r->weight,
