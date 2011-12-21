@@ -43,7 +43,7 @@ class Admin extends CI_Controller {
 			$this->form_validation->set_rules('product_name', 'Nome do Produto', 'required');
 			$this->form_validation->set_rules('product_qty', 'Quantidade do Produto', 'required');
 			$this->form_validation->set_rules('product_weight', 'Peso do Produto', 'required');
-			$this->form_validation->set_rules('product_heigth', 'Altura do Produto', 'required');
+			$this->form_validation->set_rules('product_height', 'Altura do Produto', 'required');
 			$this->form_validation->set_rules('product_width', 'Largura do Produto', 'required');
 			$this->form_validation->set_rules('product_category', 'Categoria do Produto', 'required');
 			$this->form_validation->set_rules('product_description', 'Descrição do Produto', 'required');
@@ -55,13 +55,36 @@ class Admin extends CI_Controller {
 			if($this->form_validation->run() == false) {		
 				$this->load->view('panel/new_product', $data);
 			} else {
-				$this->load->view('panel/new_product_sucess');
+				$to_insert = array(
+					'name' => $this->input->post('product_name'),
+					'qty' => $this->input->post('product_qty'),
+					'weight' => $this->input->post('product_weight'),
+					'height' => $this->input->post('product_height'),
+					'width' => $this->input->post('product_width'),
+					'category' => $this->input->post('product_category'),
+					'description' => $this->input->post('product_description')												
+				);
+				
+				$filter = array('name' => $to_insert['name'],
+								'category' => $to_insert['category']);
+				
+				$query = $this->db->get_where('products', $filter);
+				
+				if(!$query->result()){
+					if($this->db->insert('products', $to_insert)) {
+						$this->load->view('panel/new_product_sucess');
+					}
+				} else {
+					redirect('panel/admin/products/', 'refresh');
+				}
 			}
 			
 			$this->load->view('elements/panel/footer');
 			
 		} elseif($action == 'remove' && $id) {
-			echo $id;
+			if($this->db->delete('products', array('id' => $id))) {
+				redirect('panel/admin/products', 'refresh');
+			}
 		}
 	}
 	
@@ -87,5 +110,10 @@ class Admin extends CI_Controller {
 		$this->load->view('elements/panel/header', $data);
 		//$this->load->view('panel/comments');
 		$this->load->view('elements/panel/footer');
+	}
+	
+	public function test()
+	{
+		//echo "Test".PHP_EOL;
 	}
 }

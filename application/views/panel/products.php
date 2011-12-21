@@ -27,7 +27,7 @@
 											$r->weight,
 											$r->height,
 											$r->width,
-											'<a href="'.make_route('panel/admin/products/remove/'.$r->id).'">Remover</a>');
+											'<a href="'.make_route('panel/admin/products/remove/'.$r->id).'" class="remove-item">Remover</a>');
 				}
 			
 				echo $this->table->generate();

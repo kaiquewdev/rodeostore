@@ -286,6 +286,10 @@ td { vertical-align: top; }
   h2, h3 { page-break-after: avoid; }
 }
 
+body{
+	margin:0 15px 0;
+}
+
 /*Style*/
 div.form-error{
 	background:#f00;
